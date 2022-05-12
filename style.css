@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #eee; */
+    overflow: hidden;
+}
+
+:root {
+    --primary-color: #ECEFF4;
+    --secondary-color: #333;
+}
+
+.darkTheme {
+    --primary-color: #3e527e;
+    --secondary-color: #e0e0e0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+}
+
+#icon {
+    width: 25px;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    align-items: center;
+}
+
+.main-text {
+    width: 15ch;
+    color: #f05d3f;
+    animation: typing 2s steps(15), blink .5s step-end infinite alternate;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid;
+    font-size: 65px;
+    font-family: Consolas, monaco, monospace;
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.name {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.name a{
+    background: linear-gradient(to right, rgb(226, 226, 226) 50%, #E21143 50%, #FFB03A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    transition: 0.5s ease-out;
+}
+
+.name a:hover {
+    background-position: -100%;
+} 
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        height: 50vh;
+        align-items: center;
+    }
+
+    .main-text {
+        width: 15ch;
+        color: #f05d3f;
+        animation: typing 1.5s steps(15), blink .5s step-end infinite alternate;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 3px solid;
+        font-size: 10vw;
+        font-family: Consolas, monaco, monospace;
+        background-image: linear-gradient(60deg, #E21143, #FFB03A);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+    }
+        
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+}
+
+.nav-active {
+        transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .bun1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .content {
+    opacity: 0;
+}
+
+.toggle .bun2 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+::-webkit-scrollbar {
+    width: 20PX;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(60deg, #E21143, #FFB03A);
+    border-radius: 3px;
+}
+
+
+section {
+    height: 100vh;
+    background-color: var(--primary-color);
+    scroll-snap-align: start;
+}
+
+.scrollPage {
+    height: 100vh;
+    background-color: var(--primary-color);
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+
+.one {
+
+}
+
+.two {
+   
+}
+
+.three {
+
+}
+
+.four {
+
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h5 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+
+.social-links a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 13px;
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card {
+    padding: 40px;
+    max-width: 360px;
+    border-radius: 20px;
+    margin: 60px auto;
+    margin-top: 25vh;
+    font-family: 'Spartan', sans-serif;
+    text-align: center;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 6px 6px 12px #bebebe,
+    -6px -6px 12px #ffffff;
+}
+
+.card2 {
+    padding: 40px;
+    max-width: 360px;
+    border-radius: 20px;
+    margin: 60px auto;
+    font-family: 'Spartan', sans-serif;
+    text-align: center;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 6px 6px 12px #bebebe,
+    -6px -6px 12px #ffffff;
+}
+
+.exp {
+    background-color: var(--primary-color);
+    overflow: hidden;
+    opacity: 0;
+    line-height: 0;
+    padding: 0 1em;
+    color: transparent;
+}
+ 
+.exp:target {
+    transition: all .5s ease-in-out;
+    opacity: 1;
+    line-height: 3.3;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: var(--primary-color);
+}
