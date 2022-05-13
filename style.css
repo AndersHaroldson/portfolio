@@ -297,7 +297,7 @@ h5 {
     font-family: 'Spartan', sans-serif;
     text-align: center;
     border-radius: 50px;
-    background: #e0e0e0;
+    background: var(--primary-color);
     box-shadow: 6px 6px 12px #bebebe,
     -6px -6px 12px #ffffff;
 }
